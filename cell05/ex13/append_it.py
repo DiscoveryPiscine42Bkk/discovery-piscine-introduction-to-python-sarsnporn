@@ -1,10 +1,13 @@
 import sys
 
-params = sys.argv[1:]
-
-if not params:
-    print("none")
-else:
-    for param in params:
-        if not param.endswith("ism"):
-            print(param = "ism")
+def main():
+    params = sys.argv[1:]
+    if len(params) == 0:
+        print("none")
+        return
+        
+    for p in params:
+        if p.endswith("ism"):
+           continue
+        print(p + "ism")
+main()
